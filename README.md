@@ -68,6 +68,12 @@
 
 Настройте дешборды с отображением метрик, минимальный набор — по принципу USE (Utilization, Saturation, Errors) для CPU, RAM, диски, сеть, http запросов к веб-серверам. Добавьте необходимые tresholds на соответствующие графики.
 
+![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/w1.png)
+
+![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/w2.png)
+
+![alt text](https://github.com/Anudora41/)
+
 ### Логи
 Cоздайте ВМ, разверните на ней Elasticsearch. Установите filebeat в ВМ к веб-серверам, настройте на отправку access.log, error.log nginx в Elasticsearch.
 
@@ -88,6 +94,8 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 ### Резервное копирование
 Создайте snapshot дисков всех ВМ. Ограничьте время жизни snaphot в неделю. Сами snaphot настройте на ежедневное копирование.
+
+![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/)
 
 ## Критерии сдачи
 1. Инфраструктура отвечает минимальным требованиям, описанным в [Задаче](#Задача).
