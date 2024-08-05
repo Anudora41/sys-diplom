@@ -34,34 +34,34 @@ resource "yandex_vpc_route_table" "route-table" {
 }
 
 resource "yandex_vpc_subnet" "private-subnet-1" {
-  name           = "private-subnet-1"
+  name           = "private-1"
   zone           = "ru-central1-a"
   network_id     = yandex_vpc_network.dyplom-ushkevich.id
-  v4_cidr_blocks = ["192.168.1.0/24"]
+  v4_cidr_blocks = ["10.128.0.0/24"]
   route_table_id = yandex_vpc_route_table.route-table.id
 }
 
 resource "yandex_vpc_subnet" "private-subnet-2" {
-  name           = "private-subnet-2"
+  name           = "private-2"
   zone           = "ru-central1-b"
   network_id     = yandex_vpc_network.dyplom-ushkevich.id
-  v4_cidr_blocks = ["192.168.2.0/24"]
+  v4_cidr_blocks = ["10.129.0.0/24"]
   route_table_id = yandex_vpc_route_table.route-table.id
 }
 
 resource "yandex_vpc_subnet" "private-subnet-3" {
-  name           = "private-subnet-3"
+  name           = "private-3"
   zone           = "ru-central1-b"
   network_id     = yandex_vpc_network.dyplom-ushkevich.id
-  v4_cidr_blocks = ["192.168.3.0/24"]
+  v4_cidr_blocks = ["10.132.0.0/24"]
   route_table_id = yandex_vpc_route_table.route-table.id
 }
 
 resource "yandex_vpc_subnet" "public" {
-  name           = "public-subnet"
+  name           = "public"
   zone           = "ru-central1-b"
   network_id     = yandex_vpc_network.dyplom-ushkevich.id
-  v4_cidr_blocks = ["192.168.10.0/24"]
+  v4_cidr_blocks = ["10.131.0.0/24"]
 }
 
 resource "yandex_alb_target_group" "target-group" {
