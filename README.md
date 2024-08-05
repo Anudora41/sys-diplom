@@ -57,10 +57,14 @@
 
 ![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/balancer.png)
 
+![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/s1.png) 
+
+![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/s2.png) 
+
 Протестируйте сайт
 `curl -v <публичный IP балансера>:80` 
 
-![alt text](https://github.com/Anudora41/)
+![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/curt.png)
 
 
 ### Мониторинг
@@ -72,12 +76,14 @@
 
 ![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/w2.png)
 
-![alt text](https://github.com/Anudora41/)
+![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/zab.png)
 
 ### Логи
 Cоздайте ВМ, разверните на ней Elasticsearch. Установите filebeat в ВМ к веб-серверам, настройте на отправку access.log, error.log nginx в Elasticsearch.
 
 Создайте ВМ, разверните на ней Kibana, сконфигурируйте соединение с Elasticsearch.
+
+![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/elast.png)
 
 ### Сеть
 Разверните один VPC. Сервера web, Elasticsearch поместите в приватные подсети. Сервера Zabbix, Kibana, application load balancer определите в публичную подсеть.
