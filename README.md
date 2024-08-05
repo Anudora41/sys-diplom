@@ -101,7 +101,7 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 ### Резервное копирование
 Создайте snapshot дисков всех ВМ. Ограничьте время жизни snaphot в неделю. Сами snaphot настройте на ежедневное копирование.
 
-![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/)
+![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/sb.png)
 
 ## Критерии сдачи
 1. Инфраструктура отвечает минимальным требованиям, описанным в [Задаче](#Задача).
