@@ -43,14 +43,25 @@
 
 1. Создайте [Target Group](https://cloud.yandex.com/docs/application-load-balancer/concepts/target-group), включите в неё две созданных ВМ.
 
+![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/tg.png)
+
 2. Создайте [Backend Group](https://cloud.yandex.com/docs/application-load-balancer/concepts/backend-group), настройте backends на target group, ранее созданную. Настройте healthcheck на корень (/) и порт 80, протокол HTTP.
+
+![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/bg.png)
 
 3. Создайте [HTTP router](https://cloud.yandex.com/docs/application-load-balancer/concepts/http-router). Путь укажите — /, backend group — созданную ранее.
 
+![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/http.png)
+
 4. Создайте [Application load balancer](https://cloud.yandex.com/en/docs/application-load-balancer/) для распределения трафика на веб-сервера, созданные ранее. Укажите HTTP router, созданный ранее, задайте listener тип auto, порт 80.
+
+![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/balancer.png)
 
 Протестируйте сайт
 `curl -v <публичный IP балансера>:80` 
+
+![alt text](https://github.com/Anudora41/)
+
 
 ### Мониторинг
 Создайте ВМ, разверните на ней Zabbix. На каждую ВМ установите Zabbix Agent, настройте агенты на отправление метрик в Zabbix. 
@@ -66,6 +77,8 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 Разверните один VPC. Сервера web, Elasticsearch поместите в приватные подсети. Сервера Zabbix, Kibana, application load balancer определите в публичную подсеть.
 
 Настройте [Security Groups](https://cloud.yandex.com/docs/vpc/concepts/security-groups) соответствующих сервисов на входящий трафик только к нужным портам.
+
+![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/s-grp.png)
 
 Настройте ВМ с публичным адресом, в которой будет открыт только один порт — ssh.  Эта вм будет реализовывать концепцию  [bastion host]( https://cloud.yandex.ru/docs/tutorials/routing/bastion) . Синоним "bastion host" - "Jump host". Подключение  ansible к серверам web и Elasticsearch через данный bastion host можно сделать с помощью  [ProxyCommand](https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html#network-delegate-to-vs-proxycommand) . Допускается установка и запуск ansible непосредственно на bastion host.(Этот вариант легче в настройке)
 
