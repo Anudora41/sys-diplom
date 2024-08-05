@@ -21,7 +21,7 @@
 
 **Перед началом работы над дипломным заданием изучите [Инструкция по экономии облачных ресурсов](https://github.com/netology-code/devops-materials/blob/master/cloudwork.MD).**
 
-![alt text]([https://github.com/Anudora41/sys-diplom/blob/main/file/VM.png)
+![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/VM.png)
 
 ## Инфраструктура
 Для развёртки инфраструктуры используйте Terraform и Ansible.  
