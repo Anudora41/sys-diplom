@@ -55,7 +55,7 @@
 
 4. Создайте [Application load balancer](https://cloud.yandex.com/en/docs/application-load-balancer/) для распределения трафика на веб-сервера, созданные ранее. Укажите HTTP router, созданный ранее, задайте listener тип auto, порт 80.
 
-![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/balancer.png)
+![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/balanc.png)
 
 ![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/s1.png) 
 
