@@ -80,6 +80,8 @@ Cоздайте ВМ, разверните на ней Elasticsearch. Устан
 
 ![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/s-grp.png)
 
+![alt text](https://github.com/Anudora41/sys-diplom/blob/main/file/VPC.png)
+
 Настройте ВМ с публичным адресом, в которой будет открыт только один порт — ssh.  Эта вм будет реализовывать концепцию  [bastion host]( https://cloud.yandex.ru/docs/tutorials/routing/bastion) . Синоним "bastion host" - "Jump host". Подключение  ansible к серверам web и Elasticsearch через данный bastion host можно сделать с помощью  [ProxyCommand](https://docs.ansible.com/ansible/latest/network/user_guide/network_debug_troubleshooting.html#network-delegate-to-vs-proxycommand) . Допускается установка и запуск ansible непосредственно на bastion host.(Этот вариант легче в настройке)
 
 Исходящий доступ в интернет для ВМ внутреннего контура через [NAT-шлюз](https://yandex.cloud/ru/docs/vpc/operations/create-nat-gateway).
